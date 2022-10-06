@@ -61,15 +61,19 @@
         <div class="conteiner">
           <div class="subject-content">
             <h1 class="subject-text">Ефективні рішення для вашого бізнесу</h1>
-            <button class="btn subject-btn" type="button">
+            <button data-modal-open class="btn subject-btn" type="button">
               Замовити послугу
             </button>
-            <div class="backdrop"></div>
+           
+          </div>
+          <div data-modal class="backdrop is-hidden">
             <div class="modal">
-              <button>x</button>
+              <button data-modal-close type="button">close</button>
             </div>
+  
           </div>
         </div>
+       
       </section>
 
       <section class="conteiner-teem">
@@ -444,5 +448,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
