@@ -133,8 +133,11 @@ html{
      margin-right: 0;
        
 }
-.header-list :hover,
-.header-list :focus{
+.header-link{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link:hover,
+.header-link:focus{
      color: var(--acent-color);
      cursor: pointer;
 }
@@ -180,6 +183,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--ouwer-text-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-tel{
@@ -192,6 +196,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--ouwer-text-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -213,7 +218,23 @@ color: var(--ouwer-text-color);
   
     fill: currentColor;
 
+}
 
+
+.header-mail .header-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-tel .header-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mail:hover, 
+.header-mail:focus{
+    color: var(--acent-color);
+}
+.header-tel:hover, 
+.header-tel:focus{
+    color: var(--acent-color);
 }
 .header-mail:hover .header-icon,
 .header-mail:focus .header-icon{
@@ -291,51 +312,18 @@ letter-spacing: 0.06em;
 color: var(--secondary-text-color);
 background-color: var(--acent-color); 
 cursor: pointer;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 
 }
 .btn:hover,
 .btn:focus{
-    background: #2196F3;
+    background-color: #2196F3;
     color:var(--buttons-port-color);
 }
 
-.backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-   
-    
-}
-.backdrop.is-hidden{
-    opacity: 0;
-    pointer-events: none;
-}
-.modal{
-    min-width: 528px;
-    min-height: 581px;
-    background-color: var(--background-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-.btn-close{
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: var(--background-color);
-    border-radius: 50%;
-    background-size: 30px 30px;
-    color: var(--logo-color-text);
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
-
-}
 
 /* ---------------------ПЕРЕВАГИ--------------- */
 .conteiner-teem{
@@ -514,6 +502,8 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
    align-items: center;
    justify-content: center;
    color: var(--icon-color);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-teem-icon{
     fill: currentColor;
@@ -554,6 +544,9 @@ color: var(--background-color);
     align-items: center;
     justify-content: center;
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
        
 }
 
@@ -589,25 +582,38 @@ color:var(--secondary-text-color) ;
 
 .footer-link-mail,
 .footer-link-tel{
+ display: inline-block;
+ margin-top: 0;
     
-    display: inline-block;
-    margin-top: 0;
-    
-
-    font-style: normal;
+font-style: normal;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+
 }
 
 
-.footer-list :focus,
-.footer-list :hover{
+
+.footer-link-mail:hover,
+.footer-link-mail:focus{
     color:  var(--secondary-text-color);
     cursor: pointer;
-    
 }
+.footer-link-tel:hover,
+.footer-link-tel:focus{
+    color:  var(--secondary-text-color);
+    cursor: pointer;
+}
+.footer-link-adress:hover,
+.footer-link-adress:focus{
+    color:  var(--secondary-text-color);
+    cursor: pointer;
+}
+
+
 .footer-list:not(:last-child){
     
     margin-bottom: 9px;
@@ -661,6 +667,7 @@ color: var(--secondary-text-color);
     display: flex;
    align-items: center;
    justify-content: center;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .soc-link-icon{
@@ -716,6 +723,9 @@ background-color: var(--acent-color);
     color: #212121;
     border-radius: 4px;
     background-color: var(--buttons-port-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    backgrount-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .content-btn-item:hover,
@@ -731,7 +741,9 @@ background-color: var(--acent-color);
 .icon {
     display: inline-block;
     text-decoration: none;
-    width: 370px;
+    width: 100%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
  
 
 }
@@ -743,35 +755,46 @@ background-color: var(--acent-color);
   
 
 }
+.icon-portfolio{
+    position: relative;
+  overflow: hidden;
+    
+}
+.text-transform{
+    position: absolute;
+    top: 0;
+    left: 0;
+   padding: 63px 24px;
+margin: 0;
+height: 100%;
+
+
+    font-weight: 400;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color: var(--secondary-text-color);
+background: rgba(33, 150, 243, 0.9);
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+
+}
+.icon:hover .text-transform,
+.icon:focus .text-transform{
+    transform: translateY(0);
+   
+    
+}
 
 .project-icon{
     padding: 20px 24px;
     box-sizing: border-box;
     border: 1px solid #EEEEEE;
 }
-.icon-portfolio{
-position: relative;
-}
-.icon-portfolio::before{
-    content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.';
-    width: 100%;
-    height: 100%;
-    background: rgba(33, 150, 243, 0.9);
-    display: inline-block;
-    padding: 63px 24px;
-    position: absolute;
-    opacity: 0;
-    
 
-font-weight: 400;
-font-size: 18px;
-line-height: 1.56;
-letter-spacing: 0.03em;
-color: var(--secondary-text-color);
-}
-.icon-portfolio:hover::before{
-    opacity: 1;
-}
 
 .icon-text{
 margin-top: 0;
@@ -791,4 +814,60 @@ font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.03em;
 color: var(--ouwer-text-color);
+}
+/* -----------MODALKA--------------------- */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+   
+    
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+   
+}
+
+.modal{
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) rotateX(90deg);
+   
+
+}
+.btn-close{
+border: 1px solid rgba(0, 0, 0, 0.1);
+background: var(--background-color);
+border-radius: 50%;
+width: 30px;
+height: 30px;
+margin: 0;
+
+color: var(--logo-color-text);
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 8px;
+right: 8px;
+
+
 }
